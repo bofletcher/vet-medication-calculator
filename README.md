@@ -94,6 +94,23 @@ The application uses the following main tables:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/vet-medication-calculator)
 
+### Environment Variables Setup
+
+**Required for Supabase connection:**
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://yourproject.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key_here
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_here
+```
+
+**Get these from:**
+- Supabase Dashboard → Project Settings → API
+- Copy Project URL and API keys
+
+### Auto-Deployment
+
+Every push to the `main` branch automatically triggers a new Vercel deployment.
+
 ## Usage
 
 ### For Veterinarians
