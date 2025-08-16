@@ -111,7 +111,7 @@ SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_here
 
 Every push to the `main` branch automatically triggers a new Vercel deployment.
 
-**Last updated:** $(date)
+**Last updated:** 2024-01-15 - Testing Vercel deployment
 
 ## Usage
 
