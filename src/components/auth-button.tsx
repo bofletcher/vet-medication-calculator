@@ -35,13 +35,27 @@ export function AuthButton() {
 
     // Get initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null)
+      if (session?.user) {
+        setUser({
+          id: session.user.id,
+          email: session.user.email
+        })
+      } else {
+        setUser(null)
+      }
       setLoading(false)
     })
 
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null)
+      if (session?.user) {
+        setUser({
+          id: session.user.id,
+          email: session.user.email
+        })
+      } else {
+        setUser(null)
+      }
     })
 
     return () => subscription.unsubscribe()
