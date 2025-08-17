@@ -20,7 +20,7 @@ const authSchema = z.object({
 type AuthForm = z.infer<typeof authSchema>
 
 export function AuthButton() {
-  const [user, setUser] = useState<{ id: string; email: string } | null>(null)
+  const [user, setUser] = useState<{ id: string; email: string | undefined } | null>(null)
   const [loading, setLoading] = useState(true)
   const [isOpen, setIsOpen] = useState(false)
   const [authLoading, setAuthLoading] = useState(false)
@@ -112,7 +112,7 @@ export function AuthButton() {
     return (
       <div className="flex items-center gap-2">
         <span className="text-sm text-gray-600">
-          Welcome, {user.email}
+          Welcome, {user.email || 'User'}
         </span>
         <Button variant="outline" size="sm" onClick={signOut}>
           <LogOut className="h-4 w-4 mr-2" />
