@@ -1,6 +1,9 @@
 import { MedicationCalculator } from '@/components/medication-calculator'
 import { EnvError } from '@/components/env-error'
+import { AuthButton } from '@/components/auth-button'
 import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { User } from 'lucide-react'
 
 export default function Home() {
   // Check if environment variables are set
@@ -20,15 +23,45 @@ export default function Home() {
           <p className="text-lg text-gray-600">
             Calculate precise medication dosages for dogs and cats based on weight
           </p>
-          <div className="mt-4">
-            <Link 
-              href="/instructions"
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm text-blue-600 hover:text-blue-800 underline"
-            >
-              📖 How to Use This Calculator
+        </div>
+
+        {/* Header with Auth and Instructions */}
+        <div className="flex justify-between items-center mb-6">
+          <div className="text-sm text-gray-600">
+            <Link href="/instructions" className="text-blue-600 hover:text-blue-800 underline">
+              📖 View Instructions
             </Link>
           </div>
+          <AuthButton />
         </div>
+
+        {/* Welcome message for unauthenticated users */}
+        <div className="mb-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+          <div className="text-center">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              Welcome to the Veterinary Medication Calculator
+            </h2>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              This professional tool helps veterinarians calculate accurate medication dosages based on animal weight, 
+              species, and clinical guidelines. Sign in to access personalized features like favorites, custom medications, 
+              and calculation history.
+            </p>
+            <div className="flex justify-center gap-4">
+              <Link href="/signin">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                  <User className="h-5 w-5 mr-2" />
+                  Sign In to Get Started
+                </Button>
+              </Link>
+              <Link href="/instructions">
+                <Button variant="outline" size="lg">
+                  📖 View Instructions
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
         <MedicationCalculator />
       </div>
     </div>
