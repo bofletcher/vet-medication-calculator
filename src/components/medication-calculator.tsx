@@ -49,10 +49,14 @@ export function MedicationCalculator() {
     if (!supabase) return
     
     const { data: { user } } = await supabase.auth.getUser()
-    setUser(user)
-    
     if (user) {
+      setUser({
+        id: user.id,
+        email: user.email
+      })
       loadFavorites(user.id)
+    } else {
+      setUser(null)
     }
   }
 
