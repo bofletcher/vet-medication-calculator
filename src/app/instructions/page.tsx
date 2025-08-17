@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Calculator, Heart, Plus, User, Database, Shield, AlertTriangle } from 'lucide-react'
+import { Calculator, Heart, Plus, User, Database, AlertTriangle } from 'lucide-react'
 import Link from 'next/link'
 
 export default function InstructionsPage() {
@@ -72,7 +72,7 @@ export default function InstructionsPage() {
                   <li><strong>Select Animal Species:</strong> Use the dropdown to filter medications for dogs, cats, or both</li>
                   <li><strong>Browse Medications:</strong> Click on any medication card to select it</li>
                   <li><strong>Enter Animal Weight:</strong> Input the weight in kg or lbs (use the unit selector)</li>
-                  <li><strong>Calculate Dosage:</strong> Click "Calculate Dosage" to get precise results</li>
+                  <li><strong>Calculate Dosage:</strong> Click &quot;Calculate Dosage&quot; to get precise results</li>
                   <li><strong>Review Results:</strong> Check the calculated dosage, frequency, and duration</li>
                 </ol>
                 
@@ -98,7 +98,7 @@ export default function InstructionsPage() {
                 </p>
                 <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">
                   <li>Click the heart icon on any medication to add it to favorites</li>
-                  <li>Switch to the "Favorites" tab to see only your saved medications</li>
+                  <li>Switch to the &quot;Favorites&quot; tab to see only your saved medications</li>
                   <li>Favorites are personal and only visible to you</li>
                   <li>Click the heart again to remove from favorites</li>
                 </ul>
@@ -125,7 +125,7 @@ export default function InstructionsPage() {
                 </p>
                 <ol className="list-decimal list-inside space-y-2 text-sm text-gray-600">
                   <li>Sign in to your account</li>
-                  <li>Click "Add New Medication" at the bottom of the medication list</li>
+                  <li>Click &quot;Add New Medication&quot; at the bottom of the medication list</li>
                   <li>Fill in medication details (name, species, category, description)</li>
                   <li>Add dosage guidelines for different weight ranges</li>
                   <li>Save to make it available to all users</li>
@@ -251,7 +251,7 @@ export default function InstructionsPage() {
               <div>
                 <h4 className="font-semibold mb-2">Authentication Issues</h4>
                 <p className="text-sm text-gray-600 mb-2">
-                  If you can't sign in:
+                  If you can&apos;t sign in:
                 </p>
                 <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">
                   <li>Check your email and password</li>
