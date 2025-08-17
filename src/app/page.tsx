@@ -1,5 +1,6 @@
 import { MedicationCalculator } from '@/components/medication-calculator'
 import { EnvError } from '@/components/env-error'
+import Link from 'next/link'
 
 export default function Home() {
   // Check if environment variables are set
@@ -19,6 +20,14 @@ export default function Home() {
           <p className="text-lg text-gray-600">
             Calculate precise medication dosages for dogs and cats based on weight
           </p>
+          <div className="mt-4">
+            <Link 
+              href="/instructions"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm text-blue-600 hover:text-blue-800 underline"
+            >
+              📖 How to Use This Calculator
+            </Link>
+          </div>
         </div>
         <MedicationCalculator />
       </div>
