@@ -27,7 +27,7 @@ export function MedicationCalculator() {
   } | null>(null)
   const [favorites, setFavorites] = useState<Set<string>>(new Set())
   const [loading, setLoading] = useState(true)
-  const [user, setUser] = useState<{ id: string; email: string } | null>(null)
+  const [user, setUser] = useState<{ id: string; email: string | undefined } | null>(null)
 
   // Convert weight to kg if needed
   const getWeightInKg = (weight: string, unit: 'kg' | 'lbs'): number => {
